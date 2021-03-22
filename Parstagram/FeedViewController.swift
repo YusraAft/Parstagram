@@ -24,7 +24,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)//everytime you finish compsing want tableview to refresh so to pull newest
-        let query = PFQuery(className:"Pets")
+        let query = PFQuery(className:"Posts")
         query.includeKey("author") //if you don't add include key, it will only go to pointer and not to the actual item
         query.limit = 20 //last 20
         query.findObjectsInBackground{(posts, error) in

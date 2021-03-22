@@ -19,7 +19,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func onSubmitButton(_ sender: Any) {
         
         //example dog walking app with table of pets because each app has main tables for its main functions like statuses, comments, users, etc.
-        let post = PFObject(className: "Pets")//dictionary like
+        let post = PFObject(className: "Posts")//dictionary like
         
         post["caption"] = commentField.text!
         post["author"] = PFUser.current()!
