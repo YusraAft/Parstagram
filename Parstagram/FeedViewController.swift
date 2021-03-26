@@ -57,6 +57,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]//row that I selected
+        //comment object
+        let comment = PFObject(className: "Comments") //will autocreate this columns
+        comment["text"] = "This is random comment"
+        comment["post"] = post //which post does it belong to
+        comment["author"] = PFUser.current()!
+        //can always put in more cols later
+        
+        post.addUniqueObject(comment, forKey: "comments")//for every post I htink there is an array called comments and I want to add this comment to the array
+        //now save the post
+        post.saveInBackground{
+            (success, error) in
+            if success{
+                print("Comment Saved")
+            } else{
+                print("Error saving Comment")
+            }
+        }
+    }//everytime user taps pic then it calls this code
     
     
     /*
@@ -69,4 +89,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     */
 
+    
+    @IBAction func onLogOut(_ sender: Any) {
+        
+        PFUser.logOut()
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+        
+        //UIApplication.shared.delegate as! AppDelegate
+        
+        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate; delegate.window?.rootViewController = loginViewController
+        //when you logout it switches to the login screen aka loginiewcontroller
+    }
+    
+    
+    
 }
