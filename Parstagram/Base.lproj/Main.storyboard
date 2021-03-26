@@ -118,13 +118,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yusra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5a-5H-D84">
-                                            <rect key="frame" x="8" y="350" width="67" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="17" y="349" width="67" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" misplaced="YES" text="I am actually making this! " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANc-1X-oBa">
-                                            <rect key="frame" x="83" y="349" width="296" height="21"/>
+                                            <rect key="frame" x="71" y="349" width="296" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -141,7 +141,7 @@
                                         <constraint firstItem="Ixi-1j-6LP" firstAttribute="leading" secondItem="5YT-Y0-Thp" secondAttribute="leading" constant="8" id="mAL-YK-DPa"/>
                                         <constraint firstItem="Ixi-1j-6LP" firstAttribute="top" secondItem="5YT-Y0-Thp" secondAttribute="top" constant="8" id="qes-gf-j5Q"/>
                                         <constraint firstItem="x5a-5H-D84" firstAttribute="top" secondItem="Ixi-1j-6LP" secondAttribute="bottom" constant="8" id="uMb-k5-GwK"/>
-                                        <constraint firstItem="x5a-5H-D84" firstAttribute="leading" secondItem="5YT-Y0-Thp" secondAttribute="leading" constant="8" id="uQ2-lb-O4c"/>
+                                        <constraint firstItem="x5a-5H-D84" firstAttribute="leading" secondItem="5YT-Y0-Thp" secondAttribute="leading" constant="16" id="uQ2-lb-O4c"/>
                                         <constraint firstItem="ANc-1X-oBa" firstAttribute="leading" secondItem="x5a-5H-D84" secondAttribute="trailing" constant="8" id="ywn-Fl-3zz"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -150,6 +150,64 @@
                                     <outlet property="photoView" destination="Ixi-1j-6LP" id="aLU-uc-G0C"/>
                                     <outlet property="usernameLabel" destination="x5a-5H-D84" id="FZM-IU-VZV"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="utN-mq-u3q" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="406" width="414" height="37.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="utN-mq-u3q" id="EDZ-GE-rda">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yusra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD9-7f-UmQ">
+                                            <rect key="frame" x="16" y="8" width="47" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c5-NJ-MsP">
+                                            <rect key="frame" x="71" y="8" width="138.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3c5-NJ-MsP" firstAttribute="top" secondItem="EDZ-GE-rda" secondAttribute="top" constant="8" id="3NO-eU-Ogr"/>
+                                        <constraint firstItem="mD9-7f-UmQ" firstAttribute="top" secondItem="EDZ-GE-rda" secondAttribute="top" constant="8" id="6cV-v9-weN"/>
+                                        <constraint firstItem="3c5-NJ-MsP" firstAttribute="leading" secondItem="mD9-7f-UmQ" secondAttribute="trailing" constant="8" id="7Wi-Ev-eL1"/>
+                                        <constraint firstItem="3c5-NJ-MsP" firstAttribute="leading" secondItem="mD9-7f-UmQ" secondAttribute="trailing" constant="8" id="BYK-hN-hay"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3c5-NJ-MsP" secondAttribute="bottom" constant="8" id="KGz-XT-wgX"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mD9-7f-UmQ" secondAttribute="bottom" constant="8" id="Uwj-Cu-7Bc"/>
+                                        <constraint firstItem="mD9-7f-UmQ" firstAttribute="leading" secondItem="EDZ-GE-rda" secondAttribute="leading" constant="16" id="Xic-6c-OEy"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3c5-NJ-MsP" secondAttribute="trailing" constant="8" id="ddR-Ye-dg5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentLabel" destination="3c5-NJ-MsP" id="rMm-QC-ecg"/>
+                                    <outlet property="nameLabel" destination="mD9-7f-UmQ" id="WPH-kN-dak"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" id="K94-rK-NfC">
+                                <rect key="frame" x="0.0" y="443.5" width="414" height="37.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K94-rK-NfC" id="PjX-sg-jEE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS5-UX-zYo">
+                                            <rect key="frame" x="16" y="8" width="390" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.57429970854922274" green="0.57429970854922274" blue="0.57429970854922274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gS5-UX-zYo" firstAttribute="leading" secondItem="PjX-sg-jEE" secondAttribute="leading" constant="16" id="2Oe-Jx-4ul"/>
+                                        <constraint firstAttribute="trailing" secondItem="gS5-UX-zYo" secondAttribute="trailing" constant="8" id="H3S-kX-jl6"/>
+                                        <constraint firstAttribute="bottom" secondItem="gS5-UX-zYo" secondAttribute="bottom" constant="8" id="aKM-A3-KrL"/>
+                                        <constraint firstItem="gS5-UX-zYo" firstAttribute="top" secondItem="PjX-sg-jEE" secondAttribute="top" constant="8" id="zhX-wG-8qn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
