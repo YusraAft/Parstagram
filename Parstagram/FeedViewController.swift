@@ -60,7 +60,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)//everytime you finish compsing want tableview to refresh so to pull newest
         let query = PFQuery(className:"Posts")
-        query.includeKeys(["author", "comments", "comments.author"])//if you don't add include key, it will only go to pointer and not to the actual item
+        query.includeKeys(["author", "comments", "comments.text", "comments.author"])
+                           //if you don't add include key, it will only go to pointer and not to the actual item
         query.limit = 20 //last 20
         query.findObjectsInBackground{(posts, error) in
             if posts != nil {
@@ -81,8 +82,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         selectedPost.addUniqueObject(comment, forKey: "comments")//for every post I htink there is an array called comments and I want to add this comment to the array
         //now save the post
-        selectedPost.saveInBackground{
-            (success, error) in
+        selectedPost.saveInBackground{(success, error) in
             if success{
                 print("Comment Saved")
             } else{
